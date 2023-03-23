@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  height: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.crypto-header{
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to right, rgb(48, 48, 252), rgb(84, 252, 165));
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.crypto-header input {
+  width: 50%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  font-size: 18px;
+  text-align: center;
+  padding: 2px;
+  margin-top: 10px;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.crypto-container{
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: (4, 1fr);
+  justify-items: center;
+}
+
+@media(max-width: 1700px) {
+  .crypto-container{
+    grid-template-columns: repeat(3, 1fr);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media(max-width: 1300px) {
+  .crypto-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 850px) {
+  .crypto-container{
+    grid-template-columns: repeat(1, 1fr);
   }
 }
